@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-result" id="container">
+        <ul id="color-list"></ul>
+    </div></body>
+</html>
+
+<script>
+    // Your job is to implement the displayColorList() method.
+    const colors = ['red', 'blue', 'purple'];
+function displayColorList(document) {
+    // Your code goes here.
+    document.addEventListener('keydown', () => {
+        const colorList = document.getElementById('color-list');
+        
+        colors.forEach(color => {
+            const li = document.createElement('li');
+            li.textContent = color;
+            li.style.color = color;
+            colorList.appendChild(li);
+            //colorList.removeChild(li);
+        });
+    });
+}
+</script>

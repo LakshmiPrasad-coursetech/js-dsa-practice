@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container" id="container">
+        <p>Resize the browser window to fire the <code>resize</code> event.</p>>
+        <p>Window height: <span id="height"></span></p>
+        <p>Window width: <span id="width"></span></p>
+    </div>
+</body>
+</html>
+
+<script>
+    function displayMessageOnResize(window, document) {
+    // Your code goes here.
+    const height = document.getElementById('height');
+    const width = document.getElementById('width');
+
+    height.textContent = window.innerHeight;
+    width.textContent = window.innerWidth;
+
+    window.dispatchEvent(new Event('resize'));
+}
+</script>

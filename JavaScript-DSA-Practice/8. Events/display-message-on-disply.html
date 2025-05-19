@@ -1,0 +1,38 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="container" id="container">
+    <label>
+    Choose a TV show: 
+    <select id="favorite-tv-show" class="tv-show" name="tv-show">
+    <option value="">Select One ...</option>
+    <option id="seinfeld"
+    value="Seinfeld">Seinfeld</option>
+    <option id="succession"
+    value="Succession">Succession</option>
+    <option id="friends"
+    value="Friends">Friends</option>
+    </select>
+    </label>
+    <div id="result"></div>
+    </div>
+    </body>
+    </html>
+
+    <script>
+        function displayMessageOnChange(document) {
+    // Your code goes here.
+    const selectElement = document.getElementById('favorite-tv-show');
+
+    selectElement.addEventListener('change', (event) => {
+        const resultDiv = document.getElementById('result');
+        resultDiv.textContent = `You selected: ${event.target.value}`;
+})
+    }
+    </script>
+        
